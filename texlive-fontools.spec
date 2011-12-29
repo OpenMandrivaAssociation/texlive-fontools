@@ -18,8 +18,6 @@ BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
 Provides:	texlive-fontools.bin = %{EVRD}
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
 
 %description
 This package provides a few tools to ease using fonts
@@ -38,20 +36,12 @@ occurred among kern pairs"); and SHOWGLYPHS - create a pdf file
 that shows all glyphs in a font. Please see the documentation
 of the individual programs for further information.
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -103,7 +93,6 @@ of the individual programs for further information.
 %doc %{_texmfdir}/doc/man/man1/pfm2kpx.man1.pdf
 %doc %{_mandir}/man1/showglyphs.1*
 %doc %{_texmfdir}/doc/man/man1/showglyphs.man1.pdf
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -126,5 +115,3 @@ mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf texmf-dist %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_mandir}/man1
 mv %{buildroot}%{_texmfdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
