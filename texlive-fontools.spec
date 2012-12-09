@@ -1,11 +1,11 @@
-# revision 28093
+# revision 25995
 # category Package
 # catalog-ctan /fonts/utilities/fontools
-# catalog-date 2012-10-26 13:50:00 +0200
+# catalog-date 2012-03-08 23:38:15 +0100
 # catalog-license gpl2
 # catalog-version undef
 Name:		texlive-fontools
-Version:	20121026
+Version:	20120308
 Release:	1
 Summary:	Tools to simplify using fonts (especially TT/OTF ones)
 Group:		Publishing
@@ -76,3 +76,21 @@ mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf texmf-dist %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_mandir}/man1
 mv %{buildroot}%{_texmfdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
+
+
+%changelog
+* Mon Jun 11 2012 Paulo Andrade <pcpa@mandriva.com.br> 20120308-1
++ Revision: 804618
+- Update to latest release.
+
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20110619-2
++ Revision: 752044
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20110619-1
++ Revision: 718484
+- texlive-fontools
+- texlive-fontools
+- texlive-fontools
+- texlive-fontools
+
