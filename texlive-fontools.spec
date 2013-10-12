@@ -1,11 +1,11 @@
-# revision 25995
+# revision 31808
 # category Package
 # catalog-ctan /fonts/utilities/fontools
-# catalog-date 2012-03-08 23:38:15 +0100
+# catalog-date 2013-10-01 17:00:28 +0200
 # catalog-license gpl2
 # catalog-version undef
 Name:		texlive-fontools
-Version:	20120308
+Version:	20131001
 Release:	1
 Summary:	Tools to simplify using fonts (especially TT/OTF ones)
 Group:		Publishing
@@ -46,14 +46,14 @@ from an OpenType font.
 %{_texmfdistdir}/scripts/fontools/afm2afm
 %{_texmfdistdir}/scripts/fontools/autoinst
 %{_texmfdistdir}/scripts/fontools/ot2kpx
+%doc %{_mandir}/man1/afm2afm.1*
+%doc %{_texmfdistdir}/doc/man/man1/afm2afm.man1.pdf
+%doc %{_mandir}/man1/autoinst.1*
+%doc %{_texmfdistdir}/doc/man/man1/autoinst.man1.pdf
+%doc %{_mandir}/man1/ot2kpx.1*
+%doc %{_texmfdistdir}/doc/man/man1/ot2kpx.man1.pdf
 %doc %{_texmfdistdir}/doc/support/fontools/GPLv2.txt
 %doc %{_texmfdistdir}/doc/support/fontools/README
-%doc %{_mandir}/man1/afm2afm.1*
-%doc %{_texmfdir}/doc/man/man1/afm2afm.man1.pdf
-%doc %{_mandir}/man1/autoinst.1*
-%doc %{_texmfdir}/doc/man/man1/autoinst.man1.pdf
-%doc %{_mandir}/man1/ot2kpx.1*
-%doc %{_texmfdir}/doc/man/man1/ot2kpx.man1.pdf
 
 #-----------------------------------------------------------------------
 %prep
@@ -73,24 +73,6 @@ pushd %{buildroot}%{_bindir}
     ln -sf %{_texmfdistdir}/scripts/fontools/showglyphs showglyphs
 popd
 mkdir -p %{buildroot}%{_datadir}
-cp -fpar texmf texmf-dist %{buildroot}%{_datadir}
+cp -fpar texmf-dist %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_mandir}/man1
-mv %{buildroot}%{_texmfdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
-
-
-%changelog
-* Mon Jun 11 2012 Paulo Andrade <pcpa@mandriva.com.br> 20120308-1
-+ Revision: 804618
-- Update to latest release.
-
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20110619-2
-+ Revision: 752044
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20110619-1
-+ Revision: 718484
-- texlive-fontools
-- texlive-fontools
-- texlive-fontools
-- texlive-fontools
-
+mv %{buildroot}%{_texmfdistdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
