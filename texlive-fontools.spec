@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-fontools
 Version:	20131001
-Release:	2
+Release:	3
 Summary:	Tools to simplify using fonts (especially TT/OTF ones)
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/utilities/fontools
@@ -66,10 +66,7 @@ mkdir -p %{buildroot}%{_bindir}
 pushd %{buildroot}%{_bindir}
     ln -sf %{_texmfdistdir}/scripts/fontools/afm2afm afm2afm
     ln -sf %{_texmfdistdir}/scripts/fontools/autoinst autoinst
-    ln -sf %{_texmfdistdir}/scripts/fontools/cmap2enc cmap2enc
-    ln -sf %{_texmfdistdir}/scripts/fontools/font2afm font2afm
     ln -sf %{_texmfdistdir}/scripts/fontools/ot2kpx ot2kpx
-    ln -sf %{_texmfdistdir}/scripts/fontools/pfm2kpx pfm2kpx
 popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf-dist %{buildroot}%{_datadir}
