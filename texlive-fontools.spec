@@ -1,12 +1,12 @@
-# revision 31808
+# revision 32050
 # category Package
 # catalog-ctan /fonts/utilities/fontools
-# catalog-date 2013-10-01 17:00:28 +0200
+# catalog-date 2013-10-31 18:58:21 +0100
 # catalog-license gpl2
 # catalog-version undef
 Name:		texlive-fontools
-Version:	20131001
-Release:	3
+Version:	20131031
+Release:	1
 Summary:	Tools to simplify using fonts (especially TT/OTF ones)
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/utilities/fontools
