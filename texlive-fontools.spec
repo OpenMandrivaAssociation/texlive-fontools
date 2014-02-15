@@ -1,12 +1,12 @@
-# revision 32050
+# revision 32749
 # category Package
 # catalog-ctan /fonts/utilities/fontools
-# catalog-date 2013-10-31 18:58:21 +0100
+# catalog-date 2014-01-21 20:21:36 +0100
 # catalog-license gpl2
 # catalog-version undef
 Name:		texlive-fontools
-Version:	20131031
-Release:	5
+Version:	20140121
+Release:	1
 Summary:	Tools to simplify using fonts (especially TT/OTF ones)
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/utilities/fontools
@@ -22,10 +22,10 @@ Provides:	texlive-fontools.bin = %{EVRD}
 %description
 This package provides a few tools to ease using fonts
 (especially Truetype/Opentype ones) with Latex and fontinst:
-AFM2AFM - reencode .afm files; designed to replace fontinst's
-\reencodefont for big .afm files; AUTOINST - simplify the use
+afm2afm - reencode .afm files; designed to replace fontinst's
+\reencodefont for big .afm files; autoinst - simplify the use
 of the LCDF TypeTools by creating a command file for otftotfm,
-plus .fd and .sty files; and OT2KPX - extract all kerning pairs
+plus .fd and .sty files; and ot2kpx - extract all kerning pairs
 from an OpenType font.
 
 %post
