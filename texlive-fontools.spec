@@ -5,7 +5,7 @@
 # catalog-license gpl2
 # catalog-version undef
 Name:		texlive-fontools
-Version:	20180110
+Version:	20180327
 Release:	1
 Summary:	Tools to simplify using fonts (especially TT/OTF ones)
 Group:		Publishing
