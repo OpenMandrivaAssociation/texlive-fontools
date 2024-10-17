@@ -3,7 +3,7 @@ Version:	69241
 Release:	1
 Summary:	Tools to simplify using fonts (especially TT/OTF ones)
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/fonts/utilities/fontools
+URL:		https://www.ctan.org/tex-archive/fonts/utilities/fontools
 License:	GPL2
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fontools.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fontools.doc.r%{version}.tar.xz
