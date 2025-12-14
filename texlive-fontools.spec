@@ -1,5 +1,5 @@
 Name:		texlive-fontools
-Version:	73362
+Version:	76266
 Release:	1
 Summary:	Tools to simplify using fonts (especially TT/OTF ones)
 Group:		Publishing
